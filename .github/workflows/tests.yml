@@ -1,16 +1,15 @@
-name: .NET
+name: Build und run unit integrational tests
 
 on:
   push:
     branches: [ "staging" ]
 
 jobs:
-  build:
+  build_integrational_tests:
 
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout the repository
     - uses: actions/checkout@v4
     - name: Setup .NET version 6
       uses: actions/setup-dotnet@v4
